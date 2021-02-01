@@ -9,8 +9,7 @@ export 'model/list_tab.dart';
 export 'model/scrollable_list_tab.dart';
 
 const Duration _kScrollDuration = const Duration(milliseconds: 150);
-const EdgeInsetsGeometry _kTabMargin =
-    const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0);
+const EdgeInsetsGeometry _kTabMargin = const EdgeInsets.all(0);
 
 const SizedBox _kSizedBoxW8 = const SizedBox(width: 8.0);
 
