@@ -90,11 +90,15 @@ class _ScrollableListTabViewState extends State<ScrollableListTabView> {
                       height: 32,
                       margin: _kTabMargin,
                       decoration: BoxDecoration(
-                          color: selected
-                              ? tab.activeBackgroundColor
-                              : tab.inactiveBackgroundColor,
-                          borderRadius: tab.borderRadius),
-                      child: OutlinedButton(
+                        color: selected
+                            ? tab.activeBackgroundColor
+                            : tab.inactiveBackgroundColor,
+                        borderRadius: tab.borderRadius,
+                        border: Border(
+                          bottom: BorderSide(color: Colors.red, width: 3),
+                        ),
+                      ),
+                      child: FlatButton(
                         style: ButtonStyle(
                             foregroundColor: MaterialStateProperty.all(
                                 selected ? Colors.white : Colors.grey),
@@ -102,10 +106,10 @@ class _ScrollableListTabViewState extends State<ScrollableListTabView> {
                                 ? tab.activeBackgroundColor
                                 : tab.inactiveBackgroundColor),
                             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            side: MaterialStateProperty.all(BorderSide(
-                              width: 1,
-                              color: borderColor,
-                            )),
+                            // side: MaterialStateProperty.all(BorderSide(
+                            //   width: 1,
+                            //   color: borderColor,
+                            // )),
                             elevation: MaterialStateProperty.all(0),
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
