@@ -128,7 +128,7 @@ class _ScrollableListTabViewState extends State<ScrollableListTabView> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
-                  padding: _kTabMargin.add(const EdgeInsets.all(5.0)),
+                  padding: _kTabMargin,
                   child: _buildInnerTab(index),
                 ),
                 Flexible(
